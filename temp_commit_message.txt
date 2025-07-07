@@ -1,1 +1,1 @@
-feat: Make entire blog card clickable
+feat: Translate sidebar text to Japanese
