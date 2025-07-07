@@ -23,6 +23,24 @@ const Sidebar = async ({ className }: { className?: string }) => {
           ))}
         </ul>
       </nav>
+
+      <div className="mt-8 p-4 bg-white rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-4">About the Author</h3>
+        <div className="flex items-center mb-4">
+          <img
+            src="/ogp.png" // Replace with your actual profile image path
+            alt="Author Profile"
+            className="w-16 h-16 rounded-full mr-4 object-cover"
+          />
+          <div>
+            <p className="font-semibold text-lg">Your Name</p> {/* Replace with your name */}
+            <p className="text-gray-600 text-sm">A brief bio or tagline about yourself.</p> {/* Replace with your bio */}
+          </div>
+        </div>
+        <p className="text-gray-700 text-sm">
+          This is a more detailed description of the author. You can talk about your interests, what you blog about, or anything else you'd like to share with your readers.
+        </p>
+      </div>
     </aside>
   );
 };
