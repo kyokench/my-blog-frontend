@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { client } from '@/lib/sanity'
 import { Post } from '@/types/post';
 import Image from "next/image";
