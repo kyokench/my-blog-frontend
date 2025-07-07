@@ -6,18 +6,18 @@ const Header = () => {
     <header className="bg-gray-800 text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">
-          <Link href="/">My Blog</Link>
+          <Link href="/">私のブログ</Link>
         </h1>
         <nav>
           <ul className="flex space-x-4">
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/">ホーム</Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link href="/about">このブログについて</Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact">お問い合わせ</Link>
             </li>
           </ul>
         </nav>
