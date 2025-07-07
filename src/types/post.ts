@@ -1,4 +1,5 @@
 // src/types/post.ts
+
 export interface Child {
   _key: string;
   _type: string;
@@ -12,9 +13,12 @@ export interface BodyBlock {
 }
 
 export interface Post {
+  /** ← これを追加 */
+  _id: string;
+
   title: string;
-  body: BodyBlock[];
   slug: {
     current: string;
   };
+  body: BodyBlock[];
 }
