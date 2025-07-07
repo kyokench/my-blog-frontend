@@ -1,0 +1,9 @@
+C:\Users\kyokench\my-blog-frontend>git commit -F チャット用/contact_commit_message.txt
+[main ef81fba] feat: Add Contact page and update navigation
+ 5 files changed, 46 insertions(+)
+ create mode 100644 src/app/contact/page.tsx
+ create mode 100644 "\343\203\201\343\203\243\343\203\203\343\203\210\347\224\250/commit_message.txt"
+ create mode 100644 "\343\203\201\343\203\243\343\203\203\343\203\210\347\224\250/\343\203\241\343\203\203\343\202\273\343\203\274\343\202\270.txt"
+ create mode 100644 "\343\203\201\343\203\243\343\203\203\343\203\210\347\224\250/\343\203\241\343\203\203\343\202\273\343\203\274\343\202\2702.txt"
+
+C:\Users\kyokench\my-blog-frontend>

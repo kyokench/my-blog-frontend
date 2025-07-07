@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Sidebar from "../components/Sidebar";
 
 export default function RootLayout({
   children,
@@ -52,9 +53,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <Header />
-        <main className="flex-grow container mx-auto p-4">
-          {children}
-        </main>
+        <div className="flex flex-grow container mx-auto p-4">
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Sidebar />
+        </div>
         <Footer />
       </body>
     </html>

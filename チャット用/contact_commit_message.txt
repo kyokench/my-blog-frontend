@@ -1,0 +1,6 @@
+feat: Add Contact page and update navigation
+
+This commit introduces a new Contact page and integrates it into the blog's navigation.
+
+- **Contact Page**: Created a new static Contact page at `src/app/contact/page.tsx`.
+- **Navigation Update**: Added a link to the Contact page in the header navigation (`src/components/Header.tsx`).

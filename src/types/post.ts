@@ -12,6 +12,8 @@ export interface BodyBlock {
   children: Child[];
 }
 
+import { Category } from './category';
+
 export interface Post {
   _id: string;
   title: string;
@@ -25,4 +27,5 @@ export interface Post {
   };
   publishedAt?: string;
   body: BodyBlock[];
+  categories?: Category[];
 }
