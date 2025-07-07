@@ -1,13 +1,7 @@
 import { client } from '@/lib/sanity';
 import { Post, BodyBlock } from '@/types/post';
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
-export default async function PostPage({ params }: Props) {
+export default async function PostPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
   const query = `*[_type == "post" && slug.current == $slug][0]{ title, body, slug }`;
@@ -31,7 +25,7 @@ export default async function PostPage({ params }: Props) {
 
 /**
  * generateStaticParams を追加
- * Dynamic Route の静的生成に必要
+ * dynamic route の静的生成に必要
  */
 export async function generateStaticParams() {
   const query = `*[_type == "post"]{ slug }`;
