@@ -53,11 +53,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <Header />
-        <div className="flex flex-grow container mx-auto p-4">
-          <main className="flex-grow">
+        <div className="flex flex-col md:flex-row flex-grow container mx-auto p-4 gap-8">
+          <main className="flex-grow md:w-3/4">
             {children}
           </main>
-          <Sidebar />
+          <Sidebar className="md:w-1/4" />
         </div>
         <Footer />
       </body>

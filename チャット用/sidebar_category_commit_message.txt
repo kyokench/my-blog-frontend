@@ -1,0 +1,10 @@
+feat: Implement sidebar and category functionality
+
+This commit introduces a sidebar with category listing and enables category-specific post filtering.
+
+- **Category Type Definition**: Added `src/types/category.ts` for Sanity category data.
+- **Sidebar Component**: Created `src/components/Sidebar.tsx` to fetch and display categories.
+- **Layout Adjustment**: Modified `src/app/layout.tsx` to include the sidebar in a two-column layout.
+- **Category Page**: Implemented `src/app/category/[slug]/page.tsx` to show posts filtered by category.
+- **Post Type Update**: Updated `src/types/post.ts` to include category references.
+- **Bug Fix**: Addressed a `TypeError` in `Sidebar.tsx` for null slug handling.

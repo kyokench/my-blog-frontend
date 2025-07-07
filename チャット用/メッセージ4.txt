@@ -1,0 +1,8 @@
+C:\Users\kyokench\my-blog-frontend>git commit -F チャット用/sidebar_category_commit_message.txt
+[main bc1f74b] feat: Implement sidebar and category functionality
+ 7 files changed, 110 insertions(+), 3 deletions(-)
+ create mode 100644 src/app/category/[slug]/page.tsx
+ create mode 100644 src/components/Sidebar.tsx
+ create mode 100644 src/types/category.ts
+ create mode 100644 "\343\203\201\343\203\243\343\203\203\343\203\210\347\224\250/contact_commit_message.txt"
+ create mode 100644 "\343\203\201\343\203\243\343\203\203\343\203\210\347\224\250/\343\203\241\343\203\203\343\202\273\343\203\274\343\202\2703.txt"

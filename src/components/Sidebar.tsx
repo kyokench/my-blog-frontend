@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { client } from '@/lib/sanity';
 import { Category } from '@/types/category';
 
-const Sidebar = async () => {
+const Sidebar = async ({ className }: { className?: string }) => {
   const categories: Category[] = await client.fetch(`*[_type == "category"]{ _id, title, slug }`);
 
   return (
-    <aside className="w-64 p-4 bg-gray-100 rounded-lg shadow-md">
+    <aside className={`w-64 p-4 bg-gray-100 rounded-lg shadow-md ${className}`}>
       <h3 className="text-xl font-bold mb-4">Categories</h3>
       <nav>
         <ul>
