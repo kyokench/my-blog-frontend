@@ -1,9 +1,10 @@
 import { client } from '@/lib/sanity'
+import { Post } from '@/types/post';
 import Image from "next/image";
 import Link from 'next/link'
 
 export default async function Home() {
-  const posts = await client.fetch(`*[_type == "post"]{ _id, title, slug, body }`)
+  const posts: Post[] = await client.fetch(`*[_type == "post"]{ _id, title, slug, body }`)
 
   return (
     <main className="max-w-3xl mx-auto p-8">
@@ -20,7 +21,7 @@ export default async function Home() {
         <h1 className="text-3xl font-bold mb-4">ブログ記事一覧</h1>
 
         <div className="grid gap-6 w-full">
-          {posts.map((post: any) => (
+          {posts.map((post: Post) => (
             <div key={post._id} className="p-4 border rounded shadow hover:bg-gray-50">
               <Link href={`/post/${post.slug.current}`}>
                 <h2 className="text-xl font-semibold text-blue-600 hover:underline">
