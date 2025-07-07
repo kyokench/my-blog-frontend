@@ -1,12 +1,14 @@
 // src/types/post.ts
 
-export type Post = {
+export interface Post {
   _id: string;
   title: string;
   slug: {
     current: string;
   };
   body: {
-    [key: string]: any;
-  }[];
-};
+    children: {
+      text: string;
+    }[];
+  }[]; // body が配列の場合
+}
