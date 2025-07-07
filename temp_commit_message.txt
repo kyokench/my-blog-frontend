@@ -1,0 +1,1 @@
+feat: Make entire blog card clickable

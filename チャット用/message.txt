@@ -1,0 +1,11 @@
+Error: Invalid src prop (https://cdn.sanity.io/images/wjvd5gs5/production/54d33af51d7537b66717affe651b8e7f64e3d0e6-768x475.png) on `next/image`, hostname "cdn.sanity.io" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+    at defaultLoader (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/image-loader.js:67:49)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/get-img-props.js:108:36)
+    at Array.map (<anonymous>)
+    at generateImgAttrs (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/get-img-props.js:108:24)
+    at getImgProps (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/get-img-props.js:495:27)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/image-component.js:273:82)
+    at PostCard (rsc://React/Server/webpack-internal:///(rsc)/./src/components/PostCard.tsx?32:21:102)
+    at eval (rsc://React/Server/webpack-internal:///(rsc)/./src/app/page.tsx?22:29:120)
+    at Home (rsc://React/Server/webpack-internal:///(rsc)/./src/app/page.tsx?23:29:33)

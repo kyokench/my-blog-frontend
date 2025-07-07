@@ -1,0 +1,6 @@
+fix: Improve sidebar responsiveness
+
+Adjusted the layout to ensure the sidebar and main content display correctly on different screen sizes.
+
+- Modified `src/app/layout.tsx` to use responsive Tailwind CSS classes (`flex-col`, `md:flex-row`, `md:w-3/4`, `md:w-1/4`).
+- Updated `src/components/Sidebar.tsx` to accept and apply a `className` prop for flexible styling.
