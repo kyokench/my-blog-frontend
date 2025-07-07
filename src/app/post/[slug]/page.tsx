@@ -10,7 +10,7 @@ type Props = {
 export default async function PostPage({ params }: Props) {
   const { slug } = params;
 
-  const query = `*[_type == "post" && slug.current == $slug][0]{ title, body }`;
+  const query = `*[_type == "post" && slug.current == $slug][0]{ title, body, slug }`;
   const post: Post | null = await client.fetch(query, { slug });
 
   if (!post) {
@@ -29,10 +29,13 @@ export default async function PostPage({ params }: Props) {
   );
 }
 
-// 以下を追加
+/**
+ * generateStaticParams を追加
+ * Dynamic Route の静的生成に必要
+ */
 export async function generateStaticParams() {
   const query = `*[_type == "post"]{ slug }`;
-  const posts: Post[] = await client.fetch(query);
+  const posts: { slug: { current: string } }[] = await client.fetch(query);
 
   return posts.map((post) => ({
     slug: post.slug.current,
