@@ -15,6 +15,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,  // ESLint エラーを無視してビルド続行
   },
+  images: {
+    domains: ['cdn.sanity.io'],
+  },
 };
 
 module.exports = nextConfig;
