@@ -1,17 +1,11 @@
 import { client } from '@/lib/sanity';
-import { Post, BodyBlock } from '@/types/post'; // 型をインポート
+import { Post, BodyBlock } from '@/types/post';
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
-export default async function PostPage({ params }: Props) {
+export default async function PostPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
   const query = `*[_type == "post" && slug.current == $slug][0]{ title, body }`;
-  const post: Post | null = await client.fetch(query, { slug }); // 型を指定
+  const post: Post | null = await client.fetch(query, { slug });
 
   if (!post) {
     return <div>記事が見つかりませんでした。</div>;
@@ -21,8 +15,8 @@ export default async function PostPage({ params }: Props) {
     <main className="max-w-3xl mx-auto p-8">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
       <div className="prose prose-lg">
-        {post.body && post.body.map((block: BodyBlock, i: number) => (
-          <p key={block._key || i}>{block.children[0]?.text}</p>
+        {post.body && post.body.map((block: BodyBlock) => (
+          <p key={block._key}>{block.children[0]?.text}</p>
         ))}
       </div>
     </main>
