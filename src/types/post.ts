@@ -13,12 +13,16 @@ export interface BodyBlock {
 }
 
 export interface Post {
-  /** ← これを追加 */
   _id: string;
-
   title: string;
   slug: {
     current: string;
   };
+  mainImage?: {
+    asset: {
+      url: string;
+    };
+  };
+  publishedAt?: string;
   body: BodyBlock[];
 }
