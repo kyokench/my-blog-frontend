@@ -1,10 +1,10 @@
 // src/app/post/[slug]/page.tsx
 import { client } from '@/lib/sanity';
 import { Post, BodyBlock } from '@/types/post';
-import type { PageProps } from 'next';   // ← 追加
+
 
 export default async function PostPage(
-  { params }: PageProps<{ slug: string }> // ← ここを PageProps<> に
+  { params }: { params: { slug: string } }   // ← ここだけで OK
 ) {
   const { slug } = params;
 
